@@ -11,11 +11,12 @@ services:
       - "5432:5432"
     volumes:
       - pg-data:/var/lib/postgresql/data
-      - ../postgres_custom:/etc/postgresql  # Ajustado o caminho do volume
+      - ./postgres_custom:/etc/postgresql  # Ajustado o caminho do volume
+      - ../init-db.sh:/docker-entrypoint-initdb.d/init-db.sh  # Ajustado o caminho do script de inicialização
     entrypoint: /docker-entrypoint-initdb.d/init-db.sh   # Ajustado o caminho do script de inicialização
 
   vr-api:
-    build: ../vr-api  # Ajustado o caminho do build
+    build: ./vr-api  # Ajustado o caminho do build
     container_name: vr_api
     restart: always
     ports:
@@ -26,7 +27,7 @@ services:
       DATABASE_URL: postgresql://postgres:postgres@database:5432/vr-projeto
 
   vr-front:
-    build: ../vr-front  # Ajustado o caminho do build
+    build: ./vr-front  # Ajustado o caminho do build
     container_name: vr_front
     restart: always
     ports:
@@ -39,16 +40,3 @@ services:
 # Adicionando o volume persistente para o banco de dados
 volumes:
   pg-data:
-
-# Adicionando o script de inicialização para o banco de dados
-# Este script será executado apenas uma vez durante a criação do contêiner do banco de dados
-  database-init:
-    image: postgres:latest
-    volumes:
-      - ../init-db.sh:/docker-entrypoint-initdb.d/init-db.sh  # Ajustado o caminho do script de inicialização
-    depends_on:
-      - database
-
-# Comando para executar o script de inicialização após um atraso
-command: >
-    /bin/bash -c "sleep 5 && docker exec postgres_db /docker-entrypoint-initdb.d/init-db.sh"
