@@ -1,0 +1,33 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    <mat-form-field>
+      <mat-label>Descricao</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="descricao"
+        placeholder="Descricao (Máx 60 caracteres)"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Custo</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="custo"
+        placeholder="Custo"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Imagem</mat-label>
+      <input
+        type="Buffer"
+        matInput
+        formControlName="imagem"
+        placeholder="Imagem"
+      />
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="accent">Salvar</button>
+  </div>
+</form>

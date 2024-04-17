@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": "75e2",
+      "title": "Mochila"
+    },
+    {
+      "id": "39e1",
+      "title": "Camiseta"
+    },
+    {
+      "id": "94e2",
+      "title": "teclado"
+    },
+    {
+      "id": "4d20",
+      "title": "Mouse"
+    },
+    {
+      "id": "efb2",
+      "title": "Panela"
+    }
+  ]
+}
