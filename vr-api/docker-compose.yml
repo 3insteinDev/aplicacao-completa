@@ -1,5 +1,12 @@
 version: "3"
 services:
+  adminer:
+      image: adminer
+      container_name: adminer_app
+      restart: always
+      ports:
+        - "8085:8080"
+
   database:
     image: postgres:latest
     container_name: postgres_db
@@ -10,32 +17,8 @@ services:
     ports: 
       - "5432:5432"
     volumes:
-      - pg-data:/var/lib/postgresql/data
-      - ./postgres_custom:/etc/postgresql  # Ajustado o caminho do volume
-    #   - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh  # Ajustado o caminho do script de inicialização
-    # entrypoint: /docker-entrypoint-initdb.d/init-db.sh   # Ajustado o caminho do script de inicialização
-
-  # vr-api:
-  #   build: ./vr-api  # Ajustado o caminho do build
-  #   container_name: vr_api
-  #   restart: always
-  #   ports:
-  #     - "8080:8080"
-  #   depends_on:
-  #     - database
-  #   environment:
-  #     DATABASE_URL: postgresql://postgres:postgres@database:5432/vr-projeto
-
-  # vr-front:
-  #   build: ./vr-front  # Ajustado o caminho do build
-  #   container_name: vr_front
-  #   restart: always
-  #   ports:
-  #     - "4200:4200"
-  #   depends_on:
-  #     - vr-api
-  #   environment:
-  #     API_URL: http://vr-api:8080
+      - .pg-data:/var/lib/postgresql/data
+      - ./postgres_custom:/etc/postgresql  
 
 # Adicionando o volume persistente para o banco de dados
 volumes:
