@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Product } from '../interfaces/product.interface';
 import { ProductPayload } from '../interfaces/payload-product.interface';
 
@@ -7,25 +9,31 @@ import { ProductPayload } from '../interfaces/payload-product.interface';
   providedIn: 'root',
 })
 export class ProductsService {
-  httpClient = inject(HttpClient);
+  constructor(private httpClient: HttpClient) {}
 
-  getAll() {
-    return this.httpClient.get<Product[]>('http://localhost:8080/api/v1/product');
+  getAll(): Observable<Product[]> {
+    return this.httpClient.get<{ data: Product[] }>('http://localhost:8080/api/v1/product')
+      .pipe(
+        map(response => response.data)
+      );
   }
 
-  get(id: string) {
-    return this.httpClient.get<Product>(`http://localhost:8080/api/v1/product${id}`);
+  get(id: string): Observable<Product> {
+    return this.httpClient.get<{ data: Product }>(`http://localhost:8080/api/v1/product/${id}`)
+      .pipe(
+        map(response => response.data)
+      );
   }
 
-  post(payload: ProductPayload) {
+  post(payload: ProductPayload): Observable<any> {
     return this.httpClient.post('http://localhost:8080/api/v1/product', payload);
   }
 
-  put(id: string, payload: ProductPayload) {
-    return this.httpClient.put(`http://localhost:8080/api/v1/product${id}`, payload);
+  put(id: string, payload: ProductPayload): Observable<any> {
+    return this.httpClient.put(`http://localhost:8080/api/v1/product/${id}`, payload);
   }
 
-  delete(id: string) {
-    return this.httpClient.delete(`http://localhost:8080/api/v1/product${id}`);
+  delete(id: string): Observable<any> {
+    return this.httpClient.delete(`http://localhost:8080/api/v1/product/${id}`);
   }
 }

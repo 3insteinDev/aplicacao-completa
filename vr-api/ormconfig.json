@@ -1,6 +1,10 @@
-{
-	"database": "./db.sql",
-	"type": "sqlite",
+  {
+	"type": "postgres",
+	"host": "localhost",  
+	"port": 5432,   
+	"username": "postgres",      
+	"password": "postgres",  
+	"database": "vr-projeto", 
 	"synchronize": true,
 	"entities": ["dist/**/*.model.js"]
   }

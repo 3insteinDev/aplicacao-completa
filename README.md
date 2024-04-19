@@ -1,2 +1,20 @@
 # aplication-vr
 inserindo aplicação completa Backend, Frontend e Postgres
+
+
+clonar o projeto
+dentro da pasta vr-aplicacao/vr-api
+	instalar pacotes e dependencias descritas no package.json
+		comando=> npm install
+	criar imagem do postegres conforme o docker-compose.yml
+		comando=> docker-compose up
+	iniciar api
+		comando=> npm run start:dev
+		A Aplicação ficara disponivel na rota 8080
+
+dentro da pasta vr-aplicacao/vr-front
+	instalar pacotes e dependencias descritas no package.json
+		comando=> npm install
+	iniciar front
+		comando=> npm run start
+		A aplicação ficara disponivel na rota 4200

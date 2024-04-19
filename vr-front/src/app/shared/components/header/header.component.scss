@@ -1,3 +1,45 @@
 .title {
-    text-align: center;
+    text-align: start;
+}
+
+.nav{
+  display: block;
+  margin-left: 50px;
+}
+.list-nav{
+  display: flex;
+}
+h2{
+  font-size: 1em;
+}
+.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.list-nav ul li {
+  margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.list-nav ul li:last-child {
+  margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+.list-nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* Cor do texto do link */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+}
+
+.list-nav ul li a:hover {
+  color: #cccccc; /* Cor do texto do link ao passar o mouse */
 }
