@@ -1,0 +1,18 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form {
+  margin-top: 50px;
+  border: 1px solid gray;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5);
+}
