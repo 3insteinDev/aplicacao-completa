@@ -10,7 +10,7 @@ import { ListStoreComponent } from './features/stores/list-store/list-store.comp
 
 export const routes: Routes = [
   {
-    path: 'produtos',
+    path: 'products',
     resolve: {
       products: getProducts
     },
