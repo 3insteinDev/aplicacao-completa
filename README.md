@@ -15,7 +15,7 @@
   - A aplicação ficará disponível na rota http://localhost:8080
   - E disponibilizando o Swagger na porta http://localhost:8080/api
 
-  ![swagger](./vr-front/src/assets/swagger.png)
+  <img src="./vr-front/src/assets/swagger.png" alt="swagger" width="600">
 
 
 #### Dentro da pasta vr-aplicacao/vr-front
@@ -25,8 +25,8 @@
   - Comando: `npm run start`
   - A aplicação ficará disponível na rota http://localhost:4200
 
-    ![tela-cadastro-loja](./vr-front/src/assets/form-loja.png)
-    ![tela-cadastro-produto](./vr-front/src/assets/form-produto.png)
+    <img src="./vr-front/src/assets/form-loja.png" alt="tela-cadastro-loja" width="600">
+    <img src="./vr-front/src/assets/form-produto.png" alt="tela-cadastro-produto" width="600">
 
 
 #### Após o banco ser instanciado e gerado no Docker,
@@ -38,5 +38,5 @@
     - Senha: postgres
     - Banco de Dados: vr-projeto
 
-  ![Adminer-login](./vr-front/src/assets/adminer-login.png)
-  ![Adminer-banco de dados](./vr-front/src/assets/adminer-banco.png)
+  <img src="./vr-front/src/assets/adminer-login.png" alt="Adminer-login" width="600">
+  <img src="./vr-front/src/assets/adminer-banco.png" alt="Adminer-banco-de-dados" width="600">
