@@ -26,18 +26,18 @@ h2{
 }
 
 .list-nav ul li {
-  margin-right: 20px; /* Espaçamento entre os itens do menu */
+  margin-right: 20px;
 }
 
 .list-nav ul li:last-child {
-  margin-right: 0; /* Remove o espaçamento do último item */
+  margin-right: 0;
 }
 
 .list-nav ul li a {
   text-decoration: none;
-  color: #ffffff; /* Cor do texto do link */
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: bold; /* Peso da fonte */
+  color: #3b3b3b;
+  font-size: 16px;
+  font-weight:200;
 }
 
 .list-nav ul li a:hover {

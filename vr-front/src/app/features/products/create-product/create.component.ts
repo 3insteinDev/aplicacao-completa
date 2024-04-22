@@ -1,15 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ProductsService } from '../../shared/services/products.service';
+import { ProductsService } from '../../../shared/services/products.service';
 import { Router, RouterLink } from '@angular/router';
-import { FormComponent } from '../../shared/components/form/form.component';
-import { Product } from '../../shared/interfaces/product.interface';
-import { BackToListComponent } from '../../shared/components/back-to-list/back-to-list.component';
+import { FormComponent } from '../../../shared/components/form-product/form.component';
+import { Product } from '../../../shared/interfaces/product.interface';
+import { BackToListProductComponent } from '../../../shared/components/back-to-list-product/back-to-list.component';
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [FormComponent, BackToListComponent],
+  imports: [FormComponent, BackToListProductComponent],
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss',
 })
@@ -22,7 +22,7 @@ export class CreateComponent {
     this.productsService.post(product).subscribe(() => {
       this.matSnackBar.open('Produto criado com sucesso!', 'Ok');
 
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/products');
     });
   }
 }

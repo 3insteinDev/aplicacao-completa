@@ -1,0 +1,6 @@
+<div class="title">
+  <H1>Editando a Loja ID  {{store.id}}</H1>
+</div>
+<app-back-to-list-store></app-back-to-list-store>
+
+<app-form-store [store]="store" (done)="onSubmit($event)"></app-form-store>

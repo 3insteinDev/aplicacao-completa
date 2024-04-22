@@ -1,0 +1,27 @@
+.card{
+  background-color: azure;
+  display:flex;
+  justify-content: space-evenly;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+.conteudo-card{
+  background-color: azure;
+  padding: 10px;
+  align-content: center;
+  text-align: center;
+}
+.titulo{
+  padding: 10px;
+  font-size: medium;
+}
+.legenda-card{
+  background-color: azure;
+}
+.actions-card{
+  background-color:azure;
+  padding: 10px;
+  align-content: center;
+  text-align: center;
+}

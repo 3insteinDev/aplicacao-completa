@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ getProductTitle() }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-icon-button (click)="onEdit()">
+          <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="onDelete()">
+          <mat-icon>delete</mat-icon>
+      </button>
+  </mat-card-actions>
+</mat-card>

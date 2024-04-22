@@ -1,0 +1,19 @@
+<div class="selecao">
+  <div class="titulo">Cadastrando uma nova Loja</div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-content-container">
+      <mat-form-field>
+        <mat-label>Descricao</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="descricao"
+          placeholder="Descricao (Máx 60 caracteres)"
+        />
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="accent">Salvar</button>
+    </div>
+  </form>
+
+</div>

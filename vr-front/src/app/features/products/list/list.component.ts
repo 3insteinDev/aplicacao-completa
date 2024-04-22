@@ -1,11 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
-import { ProductsService } from '../../shared/services/products.service';
-import { Product } from '../../shared/interfaces/product.interface';
+import { ProductsService } from '../../../shared/services/products.service';
+import { Product } from '../../../shared/interfaces/product.interface';
 import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './components/card/card.component';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
-import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog.service';
+import { ConfirmationDialogService } from '../../../shared/services/confirmation-dialog.service';
 import { NoItemsComponent } from './components/no-items/no-items.component';
 
 @Component({
